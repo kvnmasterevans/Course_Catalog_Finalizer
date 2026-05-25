@@ -5,7 +5,7 @@ WARNING: It will overwrite any existing finalized_catalog.json in that directory
 
 
 To run:
-in terminal run "python catalog_predictor.py [name_of_preliminary_course_catalog_file.py]"
+in terminal run "python catalog_predictor.py [name_of_preliminary_course_catalog_file.json]"
 
 
 It finalizes the catalog output by first filtering the most likely course name string by accepting the most frequently appearing course string within each course ID as the canonical course name for each particular Course ID
