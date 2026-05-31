@@ -1,6 +1,7 @@
 import json
 import sys
 from collections import defaultdict
+from fuzzy_matching import cluster_courses
 
 file_path = sys.argv[1]
 
@@ -67,5 +68,11 @@ for title, entries in title_groups.items():
 # OUTPUT AS JSON FILE
 # -----------------------------------------
 
-with open("finalized_catalog.json", "w") as f:
+with open("strict_clustering.json", "w") as f:
     json.dump(finalized_catalog, f, indent=4)
+
+
+grouped = cluster_courses(finalized_catalog)
+
+with open("fuzzy_clustering.json", "w", encoding="utf-8") as f:
+    json.dump(grouped, f, indent=4)
