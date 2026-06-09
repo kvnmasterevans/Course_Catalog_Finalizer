@@ -8,8 +8,8 @@ from rapidfuzz import fuzz
 # =========================================================
 # CONFIGURATION
 # =========================================================
-
-FUZZY_THRESHOLD = 92
+# was 92
+FUZZY_THRESHOLD = 88
 
 # Common OCR substitutions
 OCR_REPLACEMENTS = {
