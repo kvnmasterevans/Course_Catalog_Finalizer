@@ -61,11 +61,27 @@ def write_json(path, data):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
-def write_csv(path, rows):
+def write_csv(path, final_student_courses):
     with open(path, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
-        writer.writerow(["course_id", "course_name"])
-        writer.writerows(rows)
+
+        writer.writerow([
+            "filename",
+            "matched_course_id",
+            "matched_course_name",
+            "score"
+        ])
+
+        for student in final_student_courses:
+            filename = student["filename"]
+
+            for course in student["courses"]:
+                writer.writerow([
+                    filename,
+                    course["matched_course_id"],
+                    course["matched_course_name"],
+                    course["score"]
+                ])
 
 
 
@@ -205,6 +221,7 @@ def main(student_data_directory, catalog):
         
         '''
     write_json("student_courses.json", final_student_courses)
+    write_json("student_courses.csv", final_student_courses)
 
 
 
