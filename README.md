@@ -187,7 +187,8 @@ python stage_3_course_extraction.py OCR_Cache finalized_catalog.json
 | v0.01.3 | README update documenting versions                                                                               |
 | v0.02   | Added fuzzy matching and clustering                                                                              |
 | v0.03   | Added Stage 2 and Stage 3 pipeline components and renamed `catalog_predictor.py` to `stage_1_catalog_builder.py` |
-| v0.03.1 | Added CSV output for the stage_3_course_extraction.py                                                            |
+| v0.03.1 | Attempted Adding CSV output for the stage_3_course_extraction.py p(actually did it wrong calling my write_json file)                                                           |
+| v0.03.2 | Added CSV output for the stage_3_course_extraction.py                                                            |
 
 ## Planned Features
 

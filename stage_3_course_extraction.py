@@ -221,7 +221,7 @@ def main(student_data_directory, catalog):
         
         '''
     write_json("student_courses.json", final_student_courses)
-    write_json("student_courses.csv", final_student_courses)
+    write_csv("student_courses.csv", final_student_courses)
 
 
 
