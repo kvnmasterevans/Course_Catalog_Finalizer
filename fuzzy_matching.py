@@ -120,6 +120,7 @@ def cluster_courses(course_data: dict):
         course_name: {
             "course_id": ...,
             "count": ...
+            "files": ...
         }
     }
     """
@@ -134,6 +135,7 @@ def cluster_courses(course_data: dict):
 
         course_id = str(data["course_id"])
         count = data["count"]
+        files = data["files"]
 
         match_key = build_match_key(course_name, course_id)
 
@@ -142,6 +144,7 @@ def cluster_courses(course_data: dict):
             "course_id": course_id,
             "count": count,
             "match_key": match_key,
+            "files": files
         }
 
         records.append(record)
@@ -224,6 +227,7 @@ def cluster_courses(course_data: dict):
                 "count": variant["count"],
                 "match_key": variant["match_key"],
                 "similarity_to_canonical": round(score, 2),
+                "files": variant["files"]
             })
 
         canonical_groups[canonical_key] = {
