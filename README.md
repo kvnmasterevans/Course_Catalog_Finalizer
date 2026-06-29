@@ -190,6 +190,7 @@ python stage_3_course_extraction.py OCR_Cache finalized_catalog.json
 | v0.03.1 | Attempted Adding CSV output for the stage_3_course_extraction.py (actually did it wrong calling my write_json file)             |                                             |
 | v0.03.2 | Added CSV output for the stage_3_course_extraction.py                                                            |
 | v0.04 | Now keep track of the file names during step 1 processing                                                          |
+| v0.04.1 | Updated README                                                                                                   |
 
 ## Planned Features
 
